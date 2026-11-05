@@ -89,6 +89,10 @@ moveChunk y límites hashed.
 docker compose exec -T mongos mongosh --quiet --file /scripts/07-balanceo-automatico.js
 ```
 
+El script registra 12 muestras cada 10 segundos: tarda aproximadamente dos minutos,
+mas el tiempo de las consultas. Dejarlo terminar para que restaure los parametros.
+El tiempo de observacion no garantiza que el balanceo haya concluido.
+
 ## 9. Consultas
 
 Desde la terminal del sistema:

@@ -32,15 +32,6 @@ cuatro volúmenes originales y su red, el nombre de proyecto sigue siendo
 Se conserva la arquitectura de config server, tres shards y mongos, y se añaden
 dos secundarios por shard para mostrar replica real.
 
-Se utiliza `name: actividad1-scott` y el puerto local **27030**. Los volúmenes
-`actividad1-scott_config-data`, `actividad1-scott_shard1-data`,
-`actividad1-scott_shard2-data` y `actividad1-scott_shard3-data`, y la red
-`actividad1-scott_mongo-net`, se declaran externos porque deben existir de la
-actividad anterior. Compose añade seis volúmenes para los secundarios.
-
-La base `scott` se conserva en ese clúster, los nuevos scripts trabajan sobre
-`sample_mflix.movies`, entonces no vuelven a insertar empleados ni borran Scott.
-
 ## Clonar y ejecutar
 
 - Clúster anterior con sus volúmenes
