@@ -1,0 +1,17 @@
+{
+  "etapa": "balanceo-configuracion-previa",
+  "fecha": {
+    "$date": "2026-11-05T03:11:44.713Z"
+  },
+  "uuid": {
+    "$binary": {
+      "base64": "3W2Zh5nUSAimd6n28zmERw==",
+      "subType": "04"
+    }
+  },
+  "configuracionAnterior": {
+    "chunkSize": 128,
+    "enableAutoMerger": true,
+    "enableBalancing": true
+  }
+}

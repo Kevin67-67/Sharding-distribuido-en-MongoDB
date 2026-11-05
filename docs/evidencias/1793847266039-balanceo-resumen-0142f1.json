@@ -1,0 +1,960 @@
+{
+  "etapa": "balanceo-resumen",
+  "fecha": {
+    "$date": "2026-11-05T02:54:26.039Z"
+  },
+  "inicio": {
+    "$date": "2026-11-05T02:52:25.269Z"
+  },
+  "fin": {
+    "$date": "2026-11-05T02:54:26.037Z"
+  },
+  "antes": {
+    "etapa": "balanceo-antes-automatico",
+    "fecha": {
+      "$date": "2026-11-05T02:52:25.314Z"
+    },
+    "total": 21352,
+    "shardKey": {
+      "id_movie": "hashed"
+    },
+    "rangos": [
+      {
+        "_id": "shard1RS",
+        "rangos": 3
+      }
+    ],
+    "distribucion": [
+      {
+        "ns": "sample_mflix.movies",
+        "shards": [
+          {
+            "shardName": "shard1RS",
+            "numOrphanedDocs": 0,
+            "numOwnedDocuments": 21352,
+            "ownedSizeBytes": 34376720,
+            "orphanedSizeBytes": 0
+          }
+        ]
+      }
+    ],
+    "balance": {
+      "chunkSize": 128,
+      "balancerCompliant": true,
+      "ok": 1,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1793847144,
+            "i": 1
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1793847144,
+          "i": 1
+        }
+      }
+    }
+  },
+  "despues": {
+    "etapa": "balanceo-despues-automatico",
+    "fecha": {
+      "$date": "2026-11-05T02:54:26.003Z"
+    },
+    "total": 21352,
+    "shardKey": {
+      "id_movie": "hashed"
+    },
+    "rangos": [
+      {
+        "_id": "shard1RS",
+        "rangos": 2
+      },
+      {
+        "_id": "shard2RS",
+        "rangos": 10
+      },
+      {
+        "_id": "shard3RS",
+        "rangos": 10
+      }
+    ],
+    "distribucion": [
+      {
+        "ns": "sample_mflix.movies",
+        "shards": [
+          {
+            "shardName": "shard1RS",
+            "numOrphanedDocs": 13118,
+            "numOwnedDocuments": 8234,
+            "ownedSizeBytes": 13256740,
+            "orphanedSizeBytes": 21119980
+          },
+          {
+            "shardName": "shard2RS",
+            "numOrphanedDocs": 0,
+            "numOwnedDocuments": 6500,
+            "ownedSizeBytes": 10543000,
+            "orphanedSizeBytes": 0
+          },
+          {
+            "shardName": "shard3RS",
+            "numOrphanedDocs": 0,
+            "numOwnedDocuments": 6618,
+            "ownedSizeBytes": 10621890,
+            "orphanedSizeBytes": 0
+          }
+        ]
+      }
+    ],
+    "balance": {
+      "chunkSize": 1,
+      "balancerCompliant": true,
+      "ok": 1,
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1793847265,
+            "i": 1
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "operationTime": {
+        "$timestamp": {
+          "t": 1793847265,
+          "i": 1
+        }
+      }
+    }
+  },
+  "rangosIniciales": [
+    {
+      "min": {
+        "id_movie": {
+          "$minKey": 1
+        }
+      },
+      "max": {
+        "id_movie": -3074457345618258400
+      },
+      "shard": "shard1RS"
+    },
+    {
+      "min": {
+        "id_movie": -3074457345618258400
+      },
+      "max": {
+        "id_movie": 3074457345618258400
+      },
+      "shard": "shard1RS"
+    },
+    {
+      "min": {
+        "id_movie": 3074457345618258400
+      },
+      "max": {
+        "id_movie": {
+          "$maxKey": 1
+        }
+      },
+      "shard": "shard1RS"
+    }
+  ],
+  "rangosFinales": [
+    {
+      "min": {
+        "id_movie": {
+          "$minKey": 1
+        }
+      },
+      "max": {
+        "id_movie": -8671044997036202000
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": -8671044997036202000
+      },
+      "max": {
+        "id_movie": -8113089613223905000
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": -8113089613223905000
+      },
+      "max": {
+        "id_movie": -7577967413768338000
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": -7577967413768338000
+      },
+      "max": {
+        "id_movie": -7039583997950484000
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": -7039583997950484000
+      },
+      "max": {
+        "id_movie": -6468543218000499000
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": -6468543218000499000
+      },
+      "max": {
+        "id_movie": -5914945544396036000
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": -5914945544396036000
+      },
+      "max": {
+        "id_movie": -5365517796463455000
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": -5365517796463455000
+      },
+      "max": {
+        "id_movie": -4823022369963351000
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": -4823022369963351000
+      },
+      "max": {
+        "id_movie": -4270741421759453700
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": -4270741421759453700
+      },
+      "max": {
+        "id_movie": -3742561617997435000
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": -3742561617997435000
+      },
+      "max": {
+        "id_movie": -3074457345618258400
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": -3074457345618258400
+      },
+      "max": {
+        "id_movie": -2475146744240478000
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": -2475146744240478000
+      },
+      "max": {
+        "id_movie": -1922477089366545400
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": -1922477089366545400
+      },
+      "max": {
+        "id_movie": -1422720390811901700
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": -1422720390811901700
+      },
+      "max": {
+        "id_movie": -825098360970107900
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": -825098360970107900
+      },
+      "max": {
+        "id_movie": -264437478268311140
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": -264437478268311140
+      },
+      "max": {
+        "id_movie": 298393048348467900
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": 298393048348467900
+      },
+      "max": {
+        "id_movie": 792039274782046700
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": 792039274782046700
+      },
+      "max": {
+        "id_movie": 1365702198267567600
+      },
+      "shard": "shard2RS"
+    },
+    {
+      "min": {
+        "id_movie": 1365702198267567600
+      },
+      "max": {
+        "id_movie": 1944586846305893000
+      },
+      "shard": "shard3RS"
+    },
+    {
+      "min": {
+        "id_movie": 1944586846305893000
+      },
+      "max": {
+        "id_movie": 3074457345618258400
+      },
+      "shard": "shard1RS"
+    },
+    {
+      "min": {
+        "id_movie": 3074457345618258400
+      },
+      "max": {
+        "id_movie": {
+          "$maxKey": 1
+        }
+      },
+      "shard": "shard1RS"
+    }
+  ],
+  "migraciones": [
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:33.512+00:00-6aebef7176e03619ee5f4fe2",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:33.512Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": {
+            "$minKey": 1
+          }
+        },
+        "max": {
+          "id_movie": -8671044997036202000
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1034433,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:34.622+00:00-6aebef7276e03619ee5f4fe6",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:34.622Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -8671044997036202000
+        },
+        "max": {
+          "id_movie": -8113089613223905000
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1053517,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:35.725+00:00-6aebef7376e03619ee5f4fea",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:35.725Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -8113089613223905000
+        },
+        "max": {
+          "id_movie": -7577967413768338000
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1057816,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:36.828+00:00-6aebef7476e03619ee5f4fee",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:36.828Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -7577967413768338000
+        },
+        "max": {
+          "id_movie": -7039583997950484000
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1054198,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:37.935+00:00-6aebef7576e03619ee5f4ff2",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:37.935Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -7039583997950484000
+        },
+        "max": {
+          "id_movie": -6468543218000499000
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1039889,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:39.040+00:00-6aebef7776e03619ee5f4ff6",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:39.040Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -6468543218000499000
+        },
+        "max": {
+          "id_movie": -5914945544396036000
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1035057,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:40.143+00:00-6aebef7876e03619ee5f4ffa",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:40.143Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -5914945544396036000
+        },
+        "max": {
+          "id_movie": -5365517796463455000
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1052174,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:41.248+00:00-6aebef7976e03619ee5f4ffe",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:41.248Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -5365517796463455000
+        },
+        "max": {
+          "id_movie": -4823022369963351000
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1031368,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:42.347+00:00-6aebef7a76e03619ee5f5002",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:42.347Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -4823022369963351000
+        },
+        "max": {
+          "id_movie": -4270741421759453700
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1030547,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:43.448+00:00-6aebef7b76e03619ee5f5006",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:43.448Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -4270741421759453700
+        },
+        "max": {
+          "id_movie": -3742561617997435000
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1053987,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:44.557+00:00-6aebef7c76e03619ee5f500a",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:44.557Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -3742561617997435000
+        },
+        "max": {
+          "id_movie": -3074457345618258400
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 768,
+          "clonedBytes": 1225235,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:45.668+00:00-6aebef7d76e03619ee5f500e",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:45.668Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -3074457345618258400
+        },
+        "max": {
+          "id_movie": -2475146744240478000
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1066528,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:46.772+00:00-6aebef7e76e03619ee5f5012",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:46.772Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -2475146744240478000
+        },
+        "max": {
+          "id_movie": -1922477089366545400
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1068999,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:47.879+00:00-6aebef7f76e03619ee5f5016",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:47.879Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -1922477089366545400
+        },
+        "max": {
+          "id_movie": -1422720390811901700
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1049822,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:48.992+00:00-6aebef8076e03619ee5f501a",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:48.992Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -1422720390811901700
+        },
+        "max": {
+          "id_movie": -825098360970107900
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1057486,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:50.105+00:00-6aebef8276e03619ee5f501e",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:50.105Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -825098360970107900
+        },
+        "max": {
+          "id_movie": -264437478268311140
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1037423,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:51.209+00:00-6aebef8376e03619ee5f5022",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:51.209Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": -264437478268311140
+        },
+        "max": {
+          "id_movie": 298393048348467900
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1063642,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:52.317+00:00-6aebef8476e03619ee5f5026",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:52.317Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": 298393048348467900
+        },
+        "max": {
+          "id_movie": 792039274782046700
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1037794,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:53.423+00:00-6aebef8576e03619ee5f502a",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:53.423Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": 792039274782046700
+        },
+        "max": {
+          "id_movie": 1365702198267567600
+        },
+        "from": "shard1RS",
+        "to": "shard2RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1050260,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    },
+    {
+      "_id": "981657326ee8-2026-11-05T02:52:54.528+00:00-6aebef8676e03619ee5f502e",
+      "server": "981657326ee8",
+      "shard": "shard1RS",
+      "clientAddr": "",
+      "time": {
+        "$date": "2026-11-05T02:52:54.528Z"
+      },
+      "what": "moveChunk.commit",
+      "ns": "sample_mflix.movies",
+      "details": {
+        "min": {
+          "id_movie": 1365702198267567600
+        },
+        "max": {
+          "id_movie": 1944586846305893000
+        },
+        "from": "shard1RS",
+        "to": "shard3RS",
+        "counts": {
+          "cloned": 650,
+          "clonedBytes": 1072246,
+          "catchup": 0,
+          "steady": 0
+        }
+      }
+    }
+  ],
+  "restaurado": {
+    "ok": 1,
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": {
+          "t": 1793847266,
+          "i": 8
+        }
+      },
+      "signature": {
+        "hash": {
+          "$binary": {
+            "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+            "subType": "00"
+          }
+        },
+        "keyId": 0
+      }
+    },
+    "operationTime": {
+      "$timestamp": {
+        "t": 1793847266,
+        "i": 8
+      }
+    }
+  },
+  "balanceadorGlobalAnterior": true,
+  "balanceadorGlobalActual": true,
+  "nota": "Comparar documentos, bytes y rangos antes/despues"
+}

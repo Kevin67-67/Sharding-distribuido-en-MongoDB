@@ -1,0 +1,51 @@
+{
+  "etapa": "crud-actualizacion",
+  "fecha": {
+    "$date": "2026-11-05T02:50:54.585Z"
+  },
+  "operacion": "updateOne",
+  "filtro": {
+    "id_movie": 9000001,
+    "tipo_practica": "crud-mflix"
+  },
+  "cambio": {
+    "$set": {
+      "title": "La última proyección: edición restaurada",
+      "runtime": 110,
+      "imdb.rating": 8.1
+    }
+  },
+  "resultado": {
+    "acknowledged": true,
+    "insertedId": null,
+    "matchedCount": 1,
+    "modifiedCount": 1,
+    "upsertedCount": 0
+  },
+  "lecturaPosterior": {
+    "_id": {
+      "$oid": "6a0000000000000000000001"
+    },
+    "id_movie": 9000001,
+    "title": "La última proyección: edición restaurada",
+    "year": 2026,
+    "genres": [
+      "Drama"
+    ],
+    "runtime": 110,
+    "languages": [
+      "Spanish"
+    ],
+    "countries": [
+      "Mexico"
+    ],
+    "directors": [
+      "Elena Navarro"
+    ],
+    "plot": "Una proyeccionista recupera el cine de su barrio.",
+    "tipo_practica": "crud-mflix",
+    "imdb": {
+      "rating": 8.1
+    }
+  }
+}

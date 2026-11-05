@@ -1,0 +1,42 @@
+{
+  "etapa": "crud-eliminacion",
+  "fecha": {
+    "$date": "2026-11-05T03:11:11.947Z"
+  },
+  "operacion": "deleteOne",
+  "eliminaciones": [
+    {
+      "filtro": {
+        "id_movie": 9000001,
+        "tipo_practica": "crud-mflix"
+      },
+      "resultado": {
+        "acknowledged": true,
+        "deletedCount": 1
+      },
+      "lecturaPosterior": null
+    },
+    {
+      "filtro": {
+        "id_movie": 9000002,
+        "tipo_practica": "crud-mflix"
+      },
+      "resultado": {
+        "acknowledged": true,
+        "deletedCount": 1
+      },
+      "lecturaPosterior": null
+    },
+    {
+      "filtro": {
+        "id_movie": 9000003,
+        "tipo_practica": "crud-mflix"
+      },
+      "resultado": {
+        "acknowledged": true,
+        "deletedCount": 1
+      },
+      "lecturaPosterior": null
+    }
+  ]
+}

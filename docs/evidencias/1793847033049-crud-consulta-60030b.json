@@ -1,0 +1,643 @@
+{
+  "etapa": "crud-consulta",
+  "fecha": {
+    "$date": "2026-11-05T02:50:33.049Z"
+  },
+  "operacion": "find",
+  "consulta": {
+    "id_movie": 9000001
+  },
+  "documentos": [
+    {
+      "_id": {
+        "$oid": "6a0000000000000000000001"
+      },
+      "id_movie": 9000001,
+      "title": "La última proyección",
+      "year": 2026,
+      "genres": [
+        "Drama"
+      ],
+      "runtime": 104,
+      "languages": [
+        "Spanish"
+      ],
+      "countries": [
+        "Mexico"
+      ],
+      "directors": [
+        "Elena Navarro"
+      ],
+      "plot": "Una proyeccionista recupera el cine de su barrio.",
+      "tipo_practica": "crud-mflix"
+    }
+  ],
+  "explainPorId": {
+    "queryPlanner": {
+      "winningPlan": {
+        "stage": "SINGLE_SHARD",
+        "shards": [
+          {
+            "explainVersion": "1",
+            "shardName": "shard2RS",
+            "connectionString": "shard2RS/shard2:27017,shard2b:27017,shard2c:27017",
+            "serverInfo": {
+              "host": "41ae1c7b21db",
+              "port": 27017,
+              "version": "8.0.16",
+              "gitVersion": "ba70b6a13fda907977110bf46e6c8137f5de48f6"
+            },
+            "namespace": "sample_mflix.movies",
+            "parsedQuery": {
+              "id_movie": {
+                "$eq": 9000001
+              }
+            },
+            "indexFilterSet": false,
+            "queryHash": "E1A23606",
+            "planCacheShapeHash": "E1A23606",
+            "planCacheKey": "8885C8FB",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "prunedSimilarIndexes": false,
+            "winningPlan": {
+              "isCached": false,
+              "stage": "FETCH",
+              "filter": {
+                "id_movie": {
+                  "$eq": 9000001
+                }
+              },
+              "inputStage": {
+                "stage": "IXSCAN",
+                "keyPattern": {
+                  "id_movie": "hashed"
+                },
+                "indexName": "id_movie_hashed",
+                "isMultiKey": false,
+                "isUnique": false,
+                "isSparse": false,
+                "isPartial": false,
+                "indexVersion": 2,
+                "direction": "forward",
+                "indexBounds": {
+                  "id_movie": [
+                    "[7445107993538388779, 7445107993538388779]"
+                  ]
+                }
+              }
+            },
+            "rejectedPlans": []
+          }
+        ]
+      }
+    },
+    "executionStats": {
+      "nReturned": 1,
+      "executionTimeMillis": 0,
+      "totalKeysExamined": 1,
+      "totalDocsExamined": 1,
+      "executionStages": {
+        "stage": "SINGLE_SHARD",
+        "nReturned": 1,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 1,
+        "totalDocsExamined": 1,
+        "totalChildMillis": 0,
+        "shards": [
+          {
+            "shardName": "shard2RS",
+            "executionSuccess": true,
+            "nReturned": 1,
+            "executionTimeMillis": 0,
+            "totalKeysExamined": 1,
+            "totalDocsExamined": 1,
+            "executionStages": {
+              "isCached": false,
+              "stage": "FETCH",
+              "filter": {
+                "id_movie": {
+                  "$eq": 9000001
+                }
+              },
+              "nReturned": 1,
+              "executionTimeMillisEstimate": 0,
+              "works": 2,
+              "advanced": 1,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 1,
+              "docsExamined": 1,
+              "alreadyHasObj": 0,
+              "inputStage": {
+                "stage": "IXSCAN",
+                "nReturned": 1,
+                "executionTimeMillisEstimate": 0,
+                "works": 2,
+                "advanced": 1,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 1,
+                "keyPattern": {
+                  "id_movie": "hashed"
+                },
+                "indexName": "id_movie_hashed",
+                "isMultiKey": false,
+                "isUnique": false,
+                "isSparse": false,
+                "isPartial": false,
+                "indexVersion": 2,
+                "direction": "forward",
+                "indexBounds": {
+                  "id_movie": [
+                    "[7445107993538388779, 7445107993538388779]"
+                  ]
+                },
+                "keysExamined": 1,
+                "seeks": 1,
+                "dupsTested": 0,
+                "dupsDropped": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    "queryShapeHash": "E59F54DF1157D93B65738FC26C8DF3FD771F3F953571A841112E5255E88308A2",
+    "serverInfo": {
+      "host": "2346c4b65161",
+      "port": 27017,
+      "version": "8.0.16",
+      "gitVersion": "ba70b6a13fda907977110bf46e6c8137f5de48f6"
+    },
+    "serverParameters": {
+      "internalQueryFacetBufferSizeBytes": 104857600,
+      "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+      "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+      "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+      "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+      "internalQueryProhibitBlockingMergeOnMongoS": 0,
+      "internalQueryMaxAddToSetBytes": 104857600,
+      "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+      "internalQueryFrameworkControl": "trySbeRestricted",
+      "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+    },
+    "command": {
+      "find": "movies",
+      "filter": {
+        "id_movie": 9000001
+      },
+      "lsid": {
+        "id": {
+          "$binary": {
+            "base64": "tCc9m+AQTL6BX+cYx2pHCw==",
+            "subType": "04"
+          }
+        }
+      },
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1793847032,
+            "i": 1
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "$db": "sample_mflix"
+    },
+    "ok": 1,
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": {
+          "t": 1793847032,
+          "i": 1
+        }
+      },
+      "signature": {
+        "hash": {
+          "$binary": {
+            "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+            "subType": "00"
+          }
+        },
+        "keyId": 0
+      }
+    },
+    "operationTime": {
+      "$timestamp": {
+        "t": 1793847031,
+        "i": 1
+      }
+    }
+  },
+  "explainPorGenero": {
+    "queryPlanner": {
+      "winningPlan": {
+        "stage": "SHARD_MERGE",
+        "shards": [
+          {
+            "explainVersion": "1",
+            "shardName": "shard1RS",
+            "connectionString": "shard1RS/shard1:27017,shard1b:27017,shard1c:27017",
+            "serverInfo": {
+              "host": "981657326ee8",
+              "port": 27017,
+              "version": "8.0.16",
+              "gitVersion": "ba70b6a13fda907977110bf46e6c8137f5de48f6"
+            },
+            "namespace": "sample_mflix.movies",
+            "parsedQuery": {
+              "genres": {
+                "$eq": "Drama"
+              }
+            },
+            "indexFilterSet": false,
+            "queryHash": "FD22764E",
+            "planCacheShapeHash": "FD22764E",
+            "planCacheKey": "19C08CCE",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "prunedSimilarIndexes": false,
+            "winningPlan": {
+              "isCached": false,
+              "stage": "LIMIT",
+              "limitAmount": 5,
+              "inputStage": {
+                "stage": "SHARDING_FILTER",
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "genres": {
+                      "$eq": "Drama"
+                    }
+                  },
+                  "direction": "forward"
+                }
+              }
+            },
+            "rejectedPlans": []
+          },
+          {
+            "explainVersion": "1",
+            "shardName": "shard2RS",
+            "connectionString": "shard2RS/shard2:27017,shard2b:27017,shard2c:27017",
+            "serverInfo": {
+              "host": "41ae1c7b21db",
+              "port": 27017,
+              "version": "8.0.16",
+              "gitVersion": "ba70b6a13fda907977110bf46e6c8137f5de48f6"
+            },
+            "namespace": "sample_mflix.movies",
+            "parsedQuery": {
+              "genres": {
+                "$eq": "Drama"
+              }
+            },
+            "indexFilterSet": false,
+            "queryHash": "FD22764E",
+            "planCacheShapeHash": "FD22764E",
+            "planCacheKey": "19C08CCE",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "prunedSimilarIndexes": false,
+            "winningPlan": {
+              "isCached": false,
+              "stage": "LIMIT",
+              "limitAmount": 5,
+              "inputStage": {
+                "stage": "SHARDING_FILTER",
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "genres": {
+                      "$eq": "Drama"
+                    }
+                  },
+                  "direction": "forward"
+                }
+              }
+            },
+            "rejectedPlans": []
+          },
+          {
+            "explainVersion": "1",
+            "shardName": "shard3RS",
+            "connectionString": "shard3RS/shard3:27017,shard3b:27017,shard3c:27017",
+            "serverInfo": {
+              "host": "5a7e8a69bcc2",
+              "port": 27017,
+              "version": "8.0.16",
+              "gitVersion": "ba70b6a13fda907977110bf46e6c8137f5de48f6"
+            },
+            "namespace": "sample_mflix.movies",
+            "parsedQuery": {
+              "genres": {
+                "$eq": "Drama"
+              }
+            },
+            "indexFilterSet": false,
+            "queryHash": "FD22764E",
+            "planCacheShapeHash": "FD22764E",
+            "planCacheKey": "19C08CCE",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "prunedSimilarIndexes": false,
+            "winningPlan": {
+              "isCached": false,
+              "stage": "LIMIT",
+              "limitAmount": 5,
+              "inputStage": {
+                "stage": "SHARDING_FILTER",
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "genres": {
+                      "$eq": "Drama"
+                    }
+                  },
+                  "direction": "forward"
+                }
+              }
+            },
+            "rejectedPlans": []
+          }
+        ]
+      }
+    },
+    "executionStats": {
+      "nReturned": 15,
+      "executionTimeMillis": 0,
+      "totalKeysExamined": 0,
+      "totalDocsExamined": 27,
+      "executionStages": {
+        "stage": "SHARD_MERGE",
+        "nReturned": 15,
+        "executionTimeMillis": 0,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 27,
+        "totalChildMillis": 0,
+        "shards": [
+          {
+            "shardName": "shard1RS",
+            "executionSuccess": true,
+            "nReturned": 5,
+            "executionTimeMillis": 0,
+            "totalKeysExamined": 0,
+            "totalDocsExamined": 7,
+            "executionStages": {
+              "isCached": false,
+              "stage": "LIMIT",
+              "nReturned": 5,
+              "executionTimeMillisEstimate": 0,
+              "works": 8,
+              "advanced": 5,
+              "needTime": 2,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 1,
+              "limitAmount": 5,
+              "inputStage": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 5,
+                "executionTimeMillisEstimate": 0,
+                "works": 7,
+                "advanced": 5,
+                "needTime": 2,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 0,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "genres": {
+                      "$eq": "Drama"
+                    }
+                  },
+                  "nReturned": 5,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 7,
+                  "advanced": 5,
+                  "needTime": 2,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 0,
+                  "direction": "forward",
+                  "docsExamined": 7
+                }
+              }
+            }
+          },
+          {
+            "shardName": "shard2RS",
+            "executionSuccess": true,
+            "nReturned": 5,
+            "executionTimeMillis": 0,
+            "totalKeysExamined": 0,
+            "totalDocsExamined": 15,
+            "executionStages": {
+              "isCached": false,
+              "stage": "LIMIT",
+              "nReturned": 5,
+              "executionTimeMillisEstimate": 0,
+              "works": 16,
+              "advanced": 5,
+              "needTime": 10,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 1,
+              "limitAmount": 5,
+              "inputStage": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 5,
+                "executionTimeMillisEstimate": 0,
+                "works": 15,
+                "advanced": 5,
+                "needTime": 10,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 0,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "genres": {
+                      "$eq": "Drama"
+                    }
+                  },
+                  "nReturned": 5,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 15,
+                  "advanced": 5,
+                  "needTime": 10,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 0,
+                  "direction": "forward",
+                  "docsExamined": 15
+                }
+              }
+            }
+          },
+          {
+            "shardName": "shard3RS",
+            "executionSuccess": true,
+            "nReturned": 5,
+            "executionTimeMillis": 0,
+            "totalKeysExamined": 0,
+            "totalDocsExamined": 5,
+            "executionStages": {
+              "isCached": false,
+              "stage": "LIMIT",
+              "nReturned": 5,
+              "executionTimeMillisEstimate": 0,
+              "works": 6,
+              "advanced": 5,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 1,
+              "limitAmount": 5,
+              "inputStage": {
+                "stage": "SHARDING_FILTER",
+                "nReturned": 5,
+                "executionTimeMillisEstimate": 0,
+                "works": 5,
+                "advanced": 5,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 0,
+                "chunkSkips": 0,
+                "inputStage": {
+                  "stage": "COLLSCAN",
+                  "filter": {
+                    "genres": {
+                      "$eq": "Drama"
+                    }
+                  },
+                  "nReturned": 5,
+                  "executionTimeMillisEstimate": 0,
+                  "works": 5,
+                  "advanced": 5,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 0,
+                  "direction": "forward",
+                  "docsExamined": 5
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "queryShapeHash": "ED690846B2604B4B422414CE3A41E250427E284CC99DECF17C3B4C65EA448AE2",
+    "serverInfo": {
+      "host": "2346c4b65161",
+      "port": 27017,
+      "version": "8.0.16",
+      "gitVersion": "ba70b6a13fda907977110bf46e6c8137f5de48f6"
+    },
+    "serverParameters": {
+      "internalQueryFacetBufferSizeBytes": 104857600,
+      "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+      "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+      "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+      "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+      "internalQueryProhibitBlockingMergeOnMongoS": 0,
+      "internalQueryMaxAddToSetBytes": 104857600,
+      "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+      "internalQueryFrameworkControl": "trySbeRestricted",
+      "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+    },
+    "command": {
+      "find": "movies",
+      "filter": {
+        "genres": "Drama"
+      },
+      "limit": 5,
+      "lsid": {
+        "id": {
+          "$binary": {
+            "base64": "tCc9m+AQTL6BX+cYx2pHCw==",
+            "subType": "04"
+          }
+        }
+      },
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": {
+            "t": 1793847032,
+            "i": 1
+          }
+        },
+        "signature": {
+          "hash": {
+            "$binary": {
+              "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "subType": "00"
+            }
+          },
+          "keyId": 0
+        }
+      },
+      "$db": "sample_mflix"
+    },
+    "ok": 1,
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": {
+          "t": 1793847032,
+          "i": 1
+        }
+      },
+      "signature": {
+        "hash": {
+          "$binary": {
+            "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+            "subType": "00"
+          }
+        },
+        "keyId": 0
+      }
+    },
+    "operationTime": {
+      "$timestamp": {
+        "t": 1793847032,
+        "i": 1
+      }
+    }
+  }
+}

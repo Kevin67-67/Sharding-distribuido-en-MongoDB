@@ -1,0 +1,98 @@
+{
+  "etapa": "sharding",
+  "fecha": {
+    "$date": "2026-11-05T03:00:38.119Z"
+  },
+  "shards": {
+    "shards": [
+      {
+        "_id": "shard1RS",
+        "host": "shard1RS/shard1:27017,shard1b:27017,shard1c:27017",
+        "state": 1,
+        "topologyTime": {
+          "$timestamp": {
+            "t": 1793234223,
+            "i": 10
+          }
+        },
+        "replSetConfigVersion": 5
+      },
+      {
+        "_id": "shard2RS",
+        "host": "shard2RS/shard2:27017,shard2b:27017,shard2c:27017",
+        "state": 1,
+        "topologyTime": {
+          "$timestamp": {
+            "t": 1793234223,
+            "i": 28
+          }
+        },
+        "replSetConfigVersion": 5
+      },
+      {
+        "_id": "shard3RS",
+        "host": "shard3RS/shard3:27017,shard3b:27017,shard3c:27017",
+        "state": 1,
+        "topologyTime": {
+          "$timestamp": {
+            "t": 1793234223,
+            "i": 51
+          }
+        },
+        "replSetConfigVersion": 5
+      }
+    ],
+    "ok": 1,
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": {
+          "t": 1793847638,
+          "i": 13
+        }
+      },
+      "signature": {
+        "hash": {
+          "$binary": {
+            "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+            "subType": "00"
+          }
+        },
+        "keyId": 0
+      }
+    },
+    "operationTime": {
+      "$timestamp": {
+        "t": 1793847638,
+        "i": 13
+      }
+    }
+  },
+  "metadata": {
+    "_id": "sample_mflix.movies",
+    "lastmodEpoch": {
+      "$oid": "6aebee26a00596b3e1c1f0b9"
+    },
+    "lastmod": {
+      "$date": "2026-11-05T02:47:02.598Z"
+    },
+    "timestamp": {
+      "$timestamp": {
+        "t": 1793846822,
+        "i": 17
+      }
+    },
+    "uuid": {
+      "$binary": {
+        "base64": "NGE/ViYKT7GjiLnsAQVF2w==",
+        "subType": "04"
+      }
+    },
+    "key": {
+      "id_movie": "hashed"
+    },
+    "unique": false,
+    "noBalance": false,
+    "enableAutoMerge": true,
+    "maxChunkSizeBytes": 134217728
+  }
+}

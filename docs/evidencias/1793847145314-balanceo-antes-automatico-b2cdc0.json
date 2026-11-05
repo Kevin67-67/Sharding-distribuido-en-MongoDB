@@ -1,0 +1,58 @@
+{
+  "etapa": "balanceo-antes-automatico",
+  "fecha": {
+    "$date": "2026-11-05T02:52:25.314Z"
+  },
+  "total": 21352,
+  "shardKey": {
+    "id_movie": "hashed"
+  },
+  "rangos": [
+    {
+      "_id": "shard1RS",
+      "rangos": 3
+    }
+  ],
+  "distribucion": [
+    {
+      "ns": "sample_mflix.movies",
+      "shards": [
+        {
+          "shardName": "shard1RS",
+          "numOrphanedDocs": 0,
+          "numOwnedDocuments": 21352,
+          "ownedSizeBytes": 34376720,
+          "orphanedSizeBytes": 0
+        }
+      ]
+    }
+  ],
+  "balance": {
+    "chunkSize": 128,
+    "balancerCompliant": true,
+    "ok": 1,
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": {
+          "t": 1793847144,
+          "i": 1
+        }
+      },
+      "signature": {
+        "hash": {
+          "$binary": {
+            "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+            "subType": "00"
+          }
+        },
+        "keyId": 0
+      }
+    },
+    "operationTime": {
+      "$timestamp": {
+        "t": 1793847144,
+        "i": 1
+      }
+    }
+  }
+}

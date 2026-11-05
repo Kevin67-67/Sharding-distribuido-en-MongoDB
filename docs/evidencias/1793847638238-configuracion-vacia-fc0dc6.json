@@ -1,0 +1,80 @@
+{
+  "etapa": "configuracion-vacia",
+  "fecha": {
+    "$date": "2026-11-05T03:00:38.238Z"
+  },
+  "total": 21352,
+  "shardKey": {
+    "id_movie": "hashed"
+  },
+  "rangos": [
+    {
+      "_id": "shard1RS",
+      "rangos": 1
+    },
+    {
+      "_id": "shard2RS",
+      "rangos": 9
+    },
+    {
+      "_id": "shard3RS",
+      "rangos": 9
+    }
+  ],
+  "distribucion": [
+    {
+      "ns": "sample_mflix.movies",
+      "shards": [
+        {
+          "shardName": "shard2RS",
+          "numOrphanedDocs": 0,
+          "numOwnedDocuments": 6500,
+          "ownedSizeBytes": 10543000,
+          "orphanedSizeBytes": 0
+        },
+        {
+          "shardName": "shard1RS",
+          "numOrphanedDocs": 13118,
+          "numOwnedDocuments": 8234,
+          "ownedSizeBytes": 13256740,
+          "orphanedSizeBytes": 21119980
+        },
+        {
+          "shardName": "shard3RS",
+          "numOrphanedDocs": 0,
+          "numOwnedDocuments": 6618,
+          "ownedSizeBytes": 10621890,
+          "orphanedSizeBytes": 0
+        }
+      ]
+    }
+  ],
+  "balance": {
+    "chunkSize": 128,
+    "balancerCompliant": true,
+    "ok": 1,
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": {
+          "t": 1793847638,
+          "i": 13
+        }
+      },
+      "signature": {
+        "hash": {
+          "$binary": {
+            "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+            "subType": "00"
+          }
+        },
+        "keyId": 0
+      }
+    },
+    "operationTime": {
+      "$timestamp": {
+        "t": 1793847638,
+        "i": 1
+      }
+    }
+  }
+}

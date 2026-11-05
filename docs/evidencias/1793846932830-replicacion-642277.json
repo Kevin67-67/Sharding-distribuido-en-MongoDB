@@ -1,0 +1,1146 @@
+{
+  "etapa": "replicacion",
+  "fecha": {
+    "$date": "2026-11-05T02:48:52.830Z"
+  },
+  "estados": [
+    {
+      "replicaSet": "shard1RS",
+      "primaryTime": {
+        "$date": "2026-11-05T02:48:51Z"
+      },
+      "miembros": [
+        {
+          "host": "shard1:27017",
+          "estado": "PRIMARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:51Z"
+          },
+          "muestra": []
+        },
+        {
+          "host": "shard1b:27017",
+          "estado": "SECONDARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:51Z"
+          },
+          "muestra": []
+        },
+        {
+          "host": "shard1c:27017",
+          "estado": "SECONDARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:51Z"
+          },
+          "muestra": []
+        }
+      ],
+      "estadoCompleto": {
+        "set": "shard1RS",
+        "date": {
+          "$date": "2026-11-05T02:48:52.666Z"
+        },
+        "myState": 1,
+        "term": 7,
+        "syncSourceHost": "",
+        "syncSourceId": -1,
+        "heartbeatIntervalMillis": 2000,
+        "majorityVoteCount": 2,
+        "writeMajorityCount": 2,
+        "votingMembersCount": 3,
+        "writableVotingMembersCount": 3,
+        "optimes": {
+          "lastCommittedOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "lastCommittedWallTime": {
+            "$date": "2026-11-05T02:48:51.364Z"
+          },
+          "readConcernMajorityOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "appliedOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "durableOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "writtenOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "lastAppliedWallTime": {
+            "$date": "2026-11-05T02:48:51.364Z"
+          },
+          "lastDurableWallTime": {
+            "$date": "2026-11-05T02:48:51.364Z"
+          },
+          "lastWrittenWallTime": {
+            "$date": "2026-11-05T02:48:51.364Z"
+          }
+        },
+        "lastStableRecoveryTimestamp": {
+          "$timestamp": {
+            "t": 1793846921,
+            "i": 1
+          }
+        },
+        "electionCandidateMetrics": {
+          "lastElectionReason": "electionTimeout",
+          "lastElectionDate": {
+            "$date": "2026-11-05T02:43:01.338Z"
+          },
+          "electionTerm": 7,
+          "lastCommittedOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 0,
+                "i": 0
+              }
+            },
+            "t": -1
+          },
+          "lastSeenWrittenOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846543,
+                "i": 1
+              }
+            },
+            "t": 6
+          },
+          "lastSeenOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846543,
+                "i": 1
+              }
+            },
+            "t": 6
+          },
+          "numVotesNeeded": 2,
+          "priorityAtElection": 1,
+          "electionTimeoutMillis": 10000,
+          "numCatchUpOps": 0,
+          "newTermStartDate": {
+            "$date": "2026-11-05T02:43:01.357Z"
+          },
+          "wMajorityWriteAvailabilityDate": {
+            "$date": "2026-11-05T02:43:01.376Z"
+          }
+        },
+        "members": [
+          {
+            "_id": 0,
+            "name": "shard1:27017",
+            "health": 1,
+            "state": 1,
+            "stateStr": "PRIMARY",
+            "uptime": 362,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "syncSourceHost": "",
+            "syncSourceId": -1,
+            "infoMessage": "",
+            "electionTime": {
+              "$timestamp": {
+                "t": 1793846581,
+                "i": 1
+              }
+            },
+            "electionDate": {
+              "$date": "2026-11-05T02:43:01Z"
+            },
+            "configVersion": 5,
+            "configTerm": 7,
+            "self": true,
+            "lastHeartbeatMessage": ""
+          },
+          {
+            "_id": 1,
+            "name": "shard1b:27017",
+            "health": 1,
+            "state": 2,
+            "stateStr": "SECONDARY",
+            "uptime": 361,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDurable": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeDurableDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastHeartbeat": {
+              "$date": "2026-11-05T02:48:51.374Z"
+            },
+            "lastHeartbeatRecv": {
+              "$date": "2026-11-05T02:48:51.868Z"
+            },
+            "pingMs": 0,
+            "lastHeartbeatMessage": "",
+            "syncSourceHost": "shard1:27017",
+            "syncSourceId": 0,
+            "infoMessage": "",
+            "configVersion": 5,
+            "configTerm": 7
+          },
+          {
+            "_id": 2,
+            "name": "shard1c:27017",
+            "health": 1,
+            "state": 2,
+            "stateStr": "SECONDARY",
+            "uptime": 361,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDurable": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeDurableDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastHeartbeat": {
+              "$date": "2026-11-05T02:48:51.373Z"
+            },
+            "lastHeartbeatRecv": {
+              "$date": "2026-11-05T02:48:51.868Z"
+            },
+            "pingMs": 0,
+            "lastHeartbeatMessage": "",
+            "syncSourceHost": "shard1:27017",
+            "syncSourceId": 0,
+            "infoMessage": "",
+            "configVersion": 5,
+            "configTerm": 7
+          }
+        ],
+        "ok": 1,
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": {
+              "t": 1793846931,
+              "i": 1
+            }
+          },
+          "signature": {
+            "hash": {
+              "$binary": {
+                "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                "subType": "00"
+              }
+            },
+            "keyId": 0
+          }
+        },
+        "operationTime": {
+          "$timestamp": {
+            "t": 1793846931,
+            "i": 1
+          }
+        }
+      }
+    },
+    {
+      "replicaSet": "shard2RS",
+      "primaryTime": {
+        "$date": "2026-11-05T02:48:51Z"
+      },
+      "miembros": [
+        {
+          "host": "shard2:27017",
+          "estado": "PRIMARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:51Z"
+          },
+          "muestra": [
+            {
+              "_id": {
+                "$oid": "573a1390f29313caabcd42e8"
+              },
+              "title": "The Great Train Robbery",
+              "id_movie": 1
+            }
+          ]
+        },
+        {
+          "host": "shard2b:27017",
+          "estado": "SECONDARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:51Z"
+          },
+          "muestra": [
+            {
+              "_id": {
+                "$oid": "573a1390f29313caabcd42e8"
+              },
+              "title": "The Great Train Robbery",
+              "id_movie": 1
+            }
+          ]
+        },
+        {
+          "host": "shard2c:27017",
+          "estado": "SECONDARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:51Z"
+          },
+          "muestra": [
+            {
+              "_id": {
+                "$oid": "573a1390f29313caabcd42e8"
+              },
+              "title": "The Great Train Robbery",
+              "id_movie": 1
+            }
+          ]
+        }
+      ],
+      "estadoCompleto": {
+        "set": "shard2RS",
+        "date": {
+          "$date": "2026-11-05T02:48:52.732Z"
+        },
+        "myState": 1,
+        "term": 7,
+        "syncSourceHost": "",
+        "syncSourceId": -1,
+        "heartbeatIntervalMillis": 2000,
+        "majorityVoteCount": 2,
+        "writeMajorityCount": 2,
+        "votingMembersCount": 3,
+        "writableVotingMembersCount": 3,
+        "optimes": {
+          "lastCommittedOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "lastCommittedWallTime": {
+            "$date": "2026-11-05T02:48:51.364Z"
+          },
+          "readConcernMajorityOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "appliedOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "durableOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "writtenOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846931,
+                "i": 1
+              }
+            },
+            "t": 7
+          },
+          "lastAppliedWallTime": {
+            "$date": "2026-11-05T02:48:51.364Z"
+          },
+          "lastDurableWallTime": {
+            "$date": "2026-11-05T02:48:51.364Z"
+          },
+          "lastWrittenWallTime": {
+            "$date": "2026-11-05T02:48:51.364Z"
+          }
+        },
+        "lastStableRecoveryTimestamp": {
+          "$timestamp": {
+            "t": 1793846921,
+            "i": 1
+          }
+        },
+        "electionCandidateMetrics": {
+          "lastElectionReason": "electionTimeout",
+          "lastElectionDate": {
+            "$date": "2026-11-05T02:43:01.344Z"
+          },
+          "electionTerm": 7,
+          "lastCommittedOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 0,
+                "i": 0
+              }
+            },
+            "t": -1
+          },
+          "lastSeenWrittenOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846543,
+                "i": 1
+              }
+            },
+            "t": 5
+          },
+          "lastSeenOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846543,
+                "i": 1
+              }
+            },
+            "t": 5
+          },
+          "numVotesNeeded": 2,
+          "priorityAtElection": 1,
+          "electionTimeoutMillis": 10000,
+          "numCatchUpOps": 0,
+          "newTermStartDate": {
+            "$date": "2026-11-05T02:43:01.358Z"
+          },
+          "wMajorityWriteAvailabilityDate": {
+            "$date": "2026-11-05T02:43:01.377Z"
+          }
+        },
+        "members": [
+          {
+            "_id": 0,
+            "name": "shard2:27017",
+            "health": 1,
+            "state": 1,
+            "stateStr": "PRIMARY",
+            "uptime": 362,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "syncSourceHost": "",
+            "syncSourceId": -1,
+            "infoMessage": "",
+            "electionTime": {
+              "$timestamp": {
+                "t": 1793846581,
+                "i": 1
+              }
+            },
+            "electionDate": {
+              "$date": "2026-11-05T02:43:01Z"
+            },
+            "configVersion": 5,
+            "configTerm": 7,
+            "self": true,
+            "lastHeartbeatMessage": ""
+          },
+          {
+            "_id": 1,
+            "name": "shard2b:27017",
+            "health": 1,
+            "state": 2,
+            "stateStr": "SECONDARY",
+            "uptime": 361,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDurable": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeDurableDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastHeartbeat": {
+              "$date": "2026-11-05T02:48:51.374Z"
+            },
+            "lastHeartbeatRecv": {
+              "$date": "2026-11-05T02:48:51.869Z"
+            },
+            "pingMs": 0,
+            "lastHeartbeatMessage": "",
+            "syncSourceHost": "shard2:27017",
+            "syncSourceId": 0,
+            "infoMessage": "",
+            "configVersion": 5,
+            "configTerm": 7
+          },
+          {
+            "_id": 2,
+            "name": "shard2c:27017",
+            "health": 1,
+            "state": 2,
+            "stateStr": "SECONDARY",
+            "uptime": 361,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDurable": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846931,
+                  "i": 1
+                }
+              },
+              "t": 7
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeDurableDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:51Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:51.364Z"
+            },
+            "lastHeartbeat": {
+              "$date": "2026-11-05T02:48:51.375Z"
+            },
+            "lastHeartbeatRecv": {
+              "$date": "2026-11-05T02:48:51.873Z"
+            },
+            "pingMs": 0,
+            "lastHeartbeatMessage": "",
+            "syncSourceHost": "shard2:27017",
+            "syncSourceId": 0,
+            "infoMessage": "",
+            "configVersion": 5,
+            "configTerm": 7
+          }
+        ],
+        "ok": 1,
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": {
+              "t": 1793846931,
+              "i": 1
+            }
+          },
+          "signature": {
+            "hash": {
+              "$binary": {
+                "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                "subType": "00"
+              }
+            },
+            "keyId": 0
+          }
+        },
+        "operationTime": {
+          "$timestamp": {
+            "t": 1793846931,
+            "i": 1
+          }
+        }
+      }
+    },
+    {
+      "replicaSet": "shard3RS",
+      "primaryTime": {
+        "$date": "2026-11-05T02:48:52Z"
+      },
+      "miembros": [
+        {
+          "host": "shard3:27017",
+          "estado": "SECONDARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:52Z"
+          },
+          "muestra": []
+        },
+        {
+          "host": "shard3b:27017",
+          "estado": "SECONDARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:52Z"
+          },
+          "muestra": []
+        },
+        {
+          "host": "shard3c:27017",
+          "estado": "PRIMARY",
+          "optimeDate": {
+            "$date": "2026-11-05T02:48:52Z"
+          },
+          "muestra": []
+        }
+      ],
+      "estadoCompleto": {
+        "set": "shard3RS",
+        "date": {
+          "$date": "2026-11-05T02:48:52.787Z"
+        },
+        "myState": 1,
+        "term": 6,
+        "syncSourceHost": "",
+        "syncSourceId": -1,
+        "heartbeatIntervalMillis": 2000,
+        "majorityVoteCount": 2,
+        "writeMajorityCount": 2,
+        "votingMembersCount": 3,
+        "writableVotingMembersCount": 3,
+        "optimes": {
+          "lastCommittedOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846932,
+                "i": 1
+              }
+            },
+            "t": 6
+          },
+          "lastCommittedWallTime": {
+            "$date": "2026-11-05T02:48:52.438Z"
+          },
+          "readConcernMajorityOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846932,
+                "i": 1
+              }
+            },
+            "t": 6
+          },
+          "appliedOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846932,
+                "i": 1
+              }
+            },
+            "t": 6
+          },
+          "durableOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846932,
+                "i": 1
+              }
+            },
+            "t": 6
+          },
+          "writtenOpTime": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846932,
+                "i": 1
+              }
+            },
+            "t": 6
+          },
+          "lastAppliedWallTime": {
+            "$date": "2026-11-05T02:48:52.438Z"
+          },
+          "lastDurableWallTime": {
+            "$date": "2026-11-05T02:48:52.438Z"
+          },
+          "lastWrittenWallTime": {
+            "$date": "2026-11-05T02:48:52.438Z"
+          }
+        },
+        "lastStableRecoveryTimestamp": {
+          "$timestamp": {
+            "t": 1793846922,
+            "i": 1
+          }
+        },
+        "electionCandidateMetrics": {
+          "lastElectionReason": "electionTimeout",
+          "lastElectionDate": {
+            "$date": "2026-11-05T02:43:02.425Z"
+          },
+          "electionTerm": 6,
+          "lastCommittedOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 0,
+                "i": 0
+              }
+            },
+            "t": -1
+          },
+          "lastSeenWrittenOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846544,
+                "i": 1
+              }
+            },
+            "t": 5
+          },
+          "lastSeenOpTimeAtElection": {
+            "ts": {
+              "$timestamp": {
+                "t": 1793846544,
+                "i": 1
+              }
+            },
+            "t": 5
+          },
+          "numVotesNeeded": 2,
+          "priorityAtElection": 1,
+          "electionTimeoutMillis": 10000,
+          "numCatchUpOps": 0,
+          "newTermStartDate": {
+            "$date": "2026-11-05T02:43:02.436Z"
+          },
+          "wMajorityWriteAvailabilityDate": {
+            "$date": "2026-11-05T02:43:02.449Z"
+          }
+        },
+        "members": [
+          {
+            "_id": 0,
+            "name": "shard3:27017",
+            "health": 1,
+            "state": 2,
+            "stateStr": "SECONDARY",
+            "uptime": 357,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846932,
+                  "i": 1
+                }
+              },
+              "t": 6
+            },
+            "optimeDurable": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846932,
+                  "i": 1
+                }
+              },
+              "t": 6
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846932,
+                  "i": 1
+                }
+              },
+              "t": 6
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:52Z"
+            },
+            "optimeDurableDate": {
+              "$date": "2026-11-05T02:48:52Z"
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:52Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "lastHeartbeat": {
+              "$date": "2026-11-05T02:48:52.443Z"
+            },
+            "lastHeartbeatRecv": {
+              "$date": "2026-11-05T02:48:50.956Z"
+            },
+            "pingMs": 0,
+            "lastHeartbeatMessage": "",
+            "syncSourceHost": "shard3c:27017",
+            "syncSourceId": 2,
+            "infoMessage": "",
+            "configVersion": 5,
+            "configTerm": 6
+          },
+          {
+            "_id": 1,
+            "name": "shard3b:27017",
+            "health": 1,
+            "state": 2,
+            "stateStr": "SECONDARY",
+            "uptime": 360,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846932,
+                  "i": 1
+                }
+              },
+              "t": 6
+            },
+            "optimeDurable": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846932,
+                  "i": 1
+                }
+              },
+              "t": 6
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846932,
+                  "i": 1
+                }
+              },
+              "t": 6
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:52Z"
+            },
+            "optimeDurableDate": {
+              "$date": "2026-11-05T02:48:52Z"
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:52Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "lastHeartbeat": {
+              "$date": "2026-11-05T02:48:52.442Z"
+            },
+            "lastHeartbeatRecv": {
+              "$date": "2026-11-05T02:48:50.956Z"
+            },
+            "pingMs": 0,
+            "lastHeartbeatMessage": "",
+            "syncSourceHost": "shard3c:27017",
+            "syncSourceId": 2,
+            "infoMessage": "",
+            "configVersion": 5,
+            "configTerm": 6
+          },
+          {
+            "_id": 2,
+            "name": "shard3c:27017",
+            "health": 1,
+            "state": 1,
+            "stateStr": "PRIMARY",
+            "uptime": 362,
+            "optime": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846932,
+                  "i": 1
+                }
+              },
+              "t": 6
+            },
+            "optimeDate": {
+              "$date": "2026-11-05T02:48:52Z"
+            },
+            "optimeWritten": {
+              "ts": {
+                "$timestamp": {
+                  "t": 1793846932,
+                  "i": 1
+                }
+              },
+              "t": 6
+            },
+            "optimeWrittenDate": {
+              "$date": "2026-11-05T02:48:52Z"
+            },
+            "lastAppliedWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "lastDurableWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "lastWrittenWallTime": {
+              "$date": "2026-11-05T02:48:52.438Z"
+            },
+            "syncSourceHost": "",
+            "syncSourceId": -1,
+            "infoMessage": "",
+            "electionTime": {
+              "$timestamp": {
+                "t": 1793846582,
+                "i": 1
+              }
+            },
+            "electionDate": {
+              "$date": "2026-11-05T02:43:02Z"
+            },
+            "configVersion": 5,
+            "configTerm": 6,
+            "self": true,
+            "lastHeartbeatMessage": ""
+          }
+        ],
+        "ok": 1,
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": {
+              "t": 1793846932,
+              "i": 1
+            }
+          },
+          "signature": {
+            "hash": {
+              "$binary": {
+                "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                "subType": "00"
+              }
+            },
+            "keyId": 0
+          }
+        },
+        "operationTime": {
+          "$timestamp": {
+            "t": 1793846932,
+            "i": 1
+          }
+        }
+      }
+    }
+  ],
+  "nota": "Una pelicula pertenece a un shard; los tres miembros de ese shard mantienen copias, una muestra vacia en otro shard no es un error"
+}

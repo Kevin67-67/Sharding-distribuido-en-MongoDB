@@ -1,0 +1,110 @@
+{
+  "etapa": "balanceo-preparado",
+  "fecha": {
+    "$date": "2026-11-05T02:51:58.684Z"
+  },
+  "uuid": {
+    "$binary": {
+      "base64": "NGE/ViYKT7GjiLnsAQVF2w==",
+      "subType": "04"
+    }
+  },
+  "configuracionAnterior": {
+    "chunkSize": 128,
+    "enableAutoMerger": true,
+    "enableBalancing": true
+  },
+  "movimientos": [
+    {
+      "comando": {
+        "moveChunk": "sample_mflix.movies",
+        "bounds": [
+          {
+            "id_movie": {
+              "$minKey": 1
+            }
+          },
+          {
+            "id_movie": -3074457345618258400
+          }
+        ],
+        "to": "shard1RS",
+        "_waitForDelete": true
+      },
+      "respuesta": {
+        "millis": 829,
+        "ok": 1,
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": {
+              "t": 1793847117,
+              "i": 7471
+            }
+          },
+          "signature": {
+            "hash": {
+              "$binary": {
+                "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                "subType": "00"
+              }
+            },
+            "keyId": 0
+          }
+        },
+        "operationTime": {
+          "$timestamp": {
+            "t": 1793847117,
+            "i": 7471
+          }
+        }
+      }
+    },
+    {
+      "comando": {
+        "moveChunk": "sample_mflix.movies",
+        "bounds": [
+          {
+            "id_movie": 3074457345618258400
+          },
+          {
+            "id_movie": {
+              "$maxKey": 1
+            }
+          }
+        ],
+        "to": "shard1RS",
+        "_waitForDelete": true
+      },
+      "respuesta": {
+        "millis": 779,
+        "ok": 1,
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": {
+              "t": 1793847118,
+              "i": 6988
+            }
+          },
+          "signature": {
+            "hash": {
+              "$binary": {
+                "base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+                "subType": "00"
+              }
+            },
+            "keyId": 0
+          }
+        },
+        "operationTime": {
+          "$timestamp": {
+            "t": 1793847118,
+            "i": 6988
+          }
+        }
+      }
+    }
+  ],
+  "totalAntes": 21352,
+  "totalDespues": 21352,
+  "nota": "Concentracion manual , la etapa siguiente activa el balanceador automatico"
+}
