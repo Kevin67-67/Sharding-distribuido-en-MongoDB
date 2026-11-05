@@ -1,0 +1,10 @@
+{
+  "archivo": "sample_mflix.movies.json.gz",
+  "formato": "Array de MongoDB Extended JSON comprimido con gzip",
+  "documentos": 21349,
+  "bytes_original": 40965581,
+  "sha256_original": "902548893930666183f233658670d94bfcc2648f887bda3e3330844c941f2e45",
+  "sha256_gzip": "e05b8e5acb59028bcf3ac83db8970947bbb2ed33d34eb88a92fc4bc2eb1a93ca",
+  "id_movie": "Entero del 1 al 21349 según la posición del documento en el archivo original.",
+  "fuente": "sample_mflix.movies.json adjunto por el alumno. No se modificó su contenido."
+}
