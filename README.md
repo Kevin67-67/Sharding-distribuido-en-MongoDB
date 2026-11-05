@@ -75,7 +75,7 @@ docker compose exec -T mongos mongosh --quiet --file /scripts/08-monitorear.js
 | `scripts/06-preparar-balanceo.js` | Provoca desequilibrio mediante migraciones manuales de movies |
 | `scripts/07-balanceo-automatico.js` | Activa y observa el balanceador, luego restaura parámetros |
 | `scripts/08-monitorear.js` | Captura informativa adicional de la distribución |
-| `docs/` | Carpeta para guardar las evidencias y redactar manualmente el reporte |
+| `docs/` | Reporte |
 | `PASOS.md` | Procedimiento manual reproducible |
 
 ## Estructura
