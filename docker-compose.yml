@@ -1,0 +1,182 @@
+name: actividad1-scott
+
+x-servidor: &servidor
+  image: mongo:8.0.16
+  networks: [mongo-net]
+  volumes:
+    - ./scripts:/scripts:ro
+    - ./data:/datos:ro
+    - ./docs/evidencias:/evidencias
+    - ./docs:/documentacion
+
+services:
+  configsvr:
+    <<: *servidor
+    command: [mongod, --configsvr, --replSet, configRS, --port, '27017', --bind_ip_all, --dbpath, /data/configdb, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: configRS
+      RS_SEED: configsvr
+      RS_ROLE: configsvr
+    volumes:
+      - config-data:/data/configdb
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard1:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard1RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard1RS
+      RS_SEED: shard1
+      RS_ROLE: shardsvr
+    volumes:
+      - shard1-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard1b:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard1RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard1RS
+      RS_SEED: shard1
+      RS_ROLE: shardsvr
+    volumes:
+      - shard1b-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard1c:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard1RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard1RS
+      RS_SEED: shard1
+      RS_ROLE: shardsvr
+    volumes:
+      - shard1c-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard2:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard2RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard2RS
+      RS_SEED: shard2
+      RS_ROLE: shardsvr
+    volumes:
+      - shard2-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard2b:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard2RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard2RS
+      RS_SEED: shard2
+      RS_ROLE: shardsvr
+    volumes:
+      - shard2b-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard2c:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard2RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard2RS
+      RS_SEED: shard2
+      RS_ROLE: shardsvr
+    volumes:
+      - shard2c-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard3:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard3RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard3RS
+      RS_SEED: shard3
+      RS_ROLE: shardsvr
+    volumes:
+      - shard3-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard3b:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard3RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard3RS
+      RS_SEED: shard3
+      RS_ROLE: shardsvr
+    volumes:
+      - shard3b-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  shard3c:
+    <<: *servidor
+    command: [mongod, --shardsvr, --replSet, shard3RS, --port, '27017', --bind_ip_all, --dbpath, /data/db, --wiredTigerCacheSizeGB, '0.25']
+    environment:
+      RS_NAME: shard3RS
+      RS_SEED: shard3
+      RS_ROLE: shardsvr
+    volumes:
+      - shard3c-data:/data/db
+      - ./scripts:/scripts:ro
+      - ./data:/datos:ro
+      - ./docs/evidencias:/evidencias
+      - ./docs:/documentacion
+
+  mongos:
+    <<: *servidor
+    command: [mongos, --configdb, 'configRS/configsvr:27017', --port, '27017', --bind_ip_all]
+    ports:
+      - '127.0.0.1:27030:27017'
+
+networks:
+  mongo-net:
+    name: actividad1-scott_mongo-net
+    external: true
+
+volumes:
+  config-data:
+    name: actividad1-scott_config-data
+    external: true
+  shard1-data:
+    name: actividad1-scott_shard1-data
+    external: true
+  shard1b-data:
+  shard1c-data:
+  shard2-data:
+    name: actividad1-scott_shard2-data
+    external: true
+  shard2b-data:
+  shard2c-data:
+  shard3-data:
+    name: actividad1-scott_shard3-data
+    external: true
+  shard3b-data:
+  shard3c-data:
