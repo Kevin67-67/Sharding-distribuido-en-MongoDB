@@ -1,4 +1,4 @@
-// Observacion del balanceador: 60 muestras cada 10 segundos
+// Observacion del balanceador: 12 muestras cada 10 segundos
 load('/scripts/lib/comun.js');
 const archivos = Mflix.fs.readdirSync('/evidencias')
   .filter(f => f.includes('-balanceo-preparado-') && f.endsWith('.json')).sort();
@@ -18,7 +18,7 @@ printjson(Mflix.admin.runCommand({
 }));
 sh.startBalancer();
 
-for (let muestra = 1; muestra <= 60; muestra++) {
+for (let muestra = 1; muestra <= 12; muestra++) {
   sleep(10000);
   Mflix.snapshot('balanceo-muestra');
 }
@@ -47,3 +47,4 @@ Mflix.guardar('balanceo-resumen', {
   balanceadorGlobalAnterior, balanceadorGlobalActual: sh.getBalancerState(),
   nota: 'Comparar documentos, bytes y rangos antes/despues'
 });
+
